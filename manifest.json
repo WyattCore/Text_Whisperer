@@ -1,0 +1,23 @@
+{
+  "name": "Text Whisperer",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "scripting", "activeTab","storage","tabs"],
+  "host_permissions" :["<all_urls>"],
+  "background":{
+    "service_worker": "dist/background.js"
+  },
+  "web_accessible_resources":[
+    {
+      "resources": ["dist/panel.html", "dist/panel.css", "dist/panel.ts"],
+      "matches":["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "dist/popup.html",
+    "default_icon": "images/logo.png"
+  }
+}
+
+

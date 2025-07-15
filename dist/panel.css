@@ -1,0 +1,113 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(28, 28, 28);
+  box-sizing: border-box;
+  overflow: visible; 
+}
+
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 100%;
+  border-bottom: 2px solid black;
+  margin-bottom: 5%;
+  color: white;
+}
+
+#header_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 2%;
+  padding-left: 10%;
+  width: 90%
+}
+
+
+.header button{
+  width: 10%;
+  height: 100%;
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 50%;
+  max-height: 60%;
+  width: 90%;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  overflow-x: hidden;
+  font-size: large;
+  background-color:bisque;
+  color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  /* margin: 5%; */
+}
+
+.chat::-webkit-scrollbar{
+    width: 2px;
+}
+.chat::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.chat::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#user_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 0px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+ 
+#chat_text{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+.user_input_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 20%;
+    max-height: 30%;
+}
+
+.user_input{
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+}
+
+.user_input input{
+    max-height: 20px;
+}
+
+.user_input button{
+    max-height: 20px;
+}
