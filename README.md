@@ -8,3 +8,5 @@ Text_Whisperer is a side project I wanted to create to dive into the world of Ch
 
 
 ### The backend is in a separate repository
+
+https://github.com/WyattCore/Text_Whisperer_Backend
