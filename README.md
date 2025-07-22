@@ -7,7 +7,7 @@ Text_Whisperer is a side project I wanted to create to dive into the world of Ch
 https://github.com/WyattCore/Text_Whisperer_Backend
 
 
-##HOW TO DOWNLOAD AND USE TEXT_WHISPERER
+## HOW TO DOWNLOAD AND USE TEXT_WHISPERER
 
 1) Download the zip of the dist/ folder.
 2) Go to "chrome://extensions" and toggle the "developer mode" on. (Usually in the top right of the page.)
