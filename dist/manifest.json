@@ -6,16 +6,16 @@
   "permissions": ["contextMenus", "scripting", "activeTab","storage","tabs"],
   "host_permissions" :["<all_urls>"],
   "background":{
-    "service_worker": "dist/background.js"
+    "service_worker": "background.js"
   },
   "web_accessible_resources":[
     {
-      "resources": ["dist/panel.html", "dist/panel.css", "dist/panel.ts"],
+      "resources": ["panel.html", "panel.css", "panel.ts"],
       "matches":["<all_urls>"]
     }
   ],
   "action": {
-    "default_popup": "dist/popup.html",
+    "default_popup": "popup.html",
     "default_icon": "images/logo.png"
   }
 }
