@@ -1,6 +1,6 @@
 # Text_Whisperer
 
-Text_Whisperer is a side project I wanted to create to dive into the world of Chrome Extensions. I decided to learn TypeScript to implement this project, which I really enjoyed doing. The project is pretty short and simple: You select text on your web page and Text_Whisperer opens a chat box that tells you more about it, along with extended chat functionality.
+Text_Whisperer is a side project I wanted to create to dive into the world of Chrome Extensions. I decided to learn TypeScript to implement this project, which I really enjoyed doing. I also gained some more experience in prompt engineering, making the AI fit the role needed for this messenger in this project. The project is pretty short and simple: You select text on your web page and Text_Whisperer opens a chat box that tells you more about it, along with extended chat functionality.
 
 ### The backend is in a separate repository
 
