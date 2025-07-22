@@ -1,7 +1,7 @@
 {
   "name": "Text Whisperer",
   "description": "Base Level Extension",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "permissions": ["contextMenus", "scripting", "activeTab","storage","tabs"],
   "host_permissions" :["<all_urls>"],
