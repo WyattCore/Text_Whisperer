@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         const el = document.getElementById("chat_text");
         try{
             if(el && text){
-                el.textContent = text;
+                el.innerHTML = text;
             }
         }catch(error){
             console.error("Error setting pop chat text: ", error);
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 { pop_status: "user_text", text: input_field.value.trim(), src: get_tab_url() },
             )
         }catch(error){
-            console.error("Error sending message from popup input")
+            console.error("Error sending message from popup input: ", error)
         }
         }
 

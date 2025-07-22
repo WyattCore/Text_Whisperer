@@ -1,6 +1,9 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
     function get_tab_url(){
         console.log("get_tab_url called");
         chrome.tabs.query({active: true, currentWindow: true}, (tabs) =>{
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const el = document.getElementById("chat_text");
             try{
                 if(el && text){
-                    el.textContent = text;
+                    el.innerHTML = text;
                 }
             }catch(error){
                 console.error('Error trying to assign chat text: ', error);

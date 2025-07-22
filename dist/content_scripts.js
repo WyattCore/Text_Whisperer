@@ -1,6 +1,11 @@
 "use strict";
-console.log("this is the content script");
 let user_text = "";
+let mouse_x = 0;
+let mouse_y = 0;
+let start_x = 0;
+let start_y = 0;
+let initial_panel_y = 0;
+let initial_panel_x = 0;
 function set_user_text(text) {
     user_text = text;
 }
@@ -12,12 +17,12 @@ function get_user_text() {
         console.error("No user text to return");
     }
 }
+///////////////////////////////////////////////////////////////////////////////
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log(message);
     if (message.action === "init_panel") {
         init_panel(message.selected_text);
     }
-    if (message.action === "show-text") {
+    else if (message.action === "show-text") {
         console.log("received show-text", message.selected_text);
         console.log("Source url: ", message.tab.url);
         set_user_text(message.selected_text);
@@ -33,36 +38,54 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         console.log("Pop up text received: ", message.text);
     }
 });
+window.addEventListener('message', function (event) {
+    if (!(event.origin.includes("chrome-extension:"))) {
+        return;
+    }
+    if (event.data.action === "exit") {
+        console.log("Exit message received: ", event.data);
+        const pan = document.getElementById("panel");
+        if (pan) {
+            pan.remove();
+        }
+        else {
+            console.error("Can't find panel iframe to remove on exit.");
+        }
+    }
+});
+///////////////////////////////////////////////////////////////////////////////////////
 async function init_panel(selected_text) {
     let panel = document.getElementById("panel");
     if (!panel) {
         console.log("New panel created");
         panel = document.createElement("iframe");
-        panel.onload = () => {
-            console.log("Panel Loaded");
-            if (panel.contentWindow) {
-                panel.contentWindow?.postMessage({ text: selected_text }, "*");
-            }
-            else {
-                console.log("no panel.content window");
-            }
-        };
-        panel.id = ("panel");
         panel.src = chrome.runtime.getURL("dist/panel.html");
+        panel.id = ("panel");
         panel.style.cssText = `
             position: fixed;
-            top: 100px;
+            top: 2%;
+            left: 65%;
             height: 80vh;
-            min-width: 380px;
+            min-width: 28vw;
             max-width: 30vw;
             resize: both;
             z-index: 999999;
             background: white;
-            box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+            box-shadow: -2px 0 10px white;
             border: 2px solid black;
-            border-radius: 5%;
         `;
+        panel.onload = on_panel_load;
         document.body.appendChild(panel);
+    }
+    function on_panel_load() {
+        console.log(panel);
+        if (panel.contentWindow) {
+            console.log(panel.contentDocument);
+            panel.contentWindow?.postMessage({ text: selected_text }, "*");
+        }
+        else {
+            console.log("no panel.content window");
+        }
     }
 }
 function load_panel(selected_text, chat_response) {
@@ -74,15 +97,3 @@ function load_panel(selected_text, chat_response) {
         console.error("No element in document with ID: panel");
     }
 }
-window.addEventListener('message', event => {
-    console.log("Exit message received: ", event.data);
-    if (event.data.action === "exit") {
-        const pan = document.getElementById("panel");
-        if (pan) {
-            pan.remove();
-        }
-        else {
-            console.error("Can't find panel iframe to remove on exit.");
-        }
-    }
-});

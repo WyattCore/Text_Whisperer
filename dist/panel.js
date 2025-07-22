@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const el = document.getElementById("chat_text");
         try {
             if (el && text) {
-                el.textContent = text;
+                el.innerHTML = text;
             }
         }
         catch (error) {

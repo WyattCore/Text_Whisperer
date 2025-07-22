@@ -1,8 +1,8 @@
 
 html{
   height: 600px;
-  width: 400px;
- 
+  min-width: 500px;
+  max-width: 600px;
 }
 
 
@@ -16,7 +16,8 @@ html{
   height: 100vh;
   overflow: hidden !important;
   box-sizing: border-box;
-}
+  background: white;
+ }
 
 #popup_container{
     display: flex;
@@ -25,8 +26,7 @@ html{
     align-items: center;
     height: 99%;
     width: 98%;
-    border-radius:2%;
-    border: 2px solid white;
+
     background-color: rgb(28, 28, 28);
    
 }
@@ -46,8 +46,8 @@ html{
 }
 
 .header h2{
-    padding-bottom: 1%;
-    margin-bottom: 2%;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 .chat {
@@ -59,8 +59,8 @@ html{
   padding-bottom: 1%;
   overflow-x: hidden;
   font-size: large;
-  background-color:bisque;
-  color: black;
+  background-color:black;
+  color: white;
   border: 2px solid white;
   border-radius: 5px;
   /* margin: 5%; */
@@ -83,38 +83,36 @@ html{
     margin-top: 0px;
     padding-right: 5px;
     margin-bottom: 5px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
  
 #chat_text{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 5px;
     margin-bottom: 5px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 .user_input_div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 25%;
     width: 100%;
 }
 
-.user_input{
+input#user_input{
     display: flex;
     flex-direction: row;
-    
+    width: 80%;
+
 }
 
-.user_input input{
-    max-height: 40px;
-    max-width: 90%;
-    color:rgba(46, 46, 46, 0.3);
-}
+
 
 .user_input button{
     max-height: 40px;
+    width: 18%;
 }
