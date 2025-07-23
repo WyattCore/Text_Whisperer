@@ -1,7 +1,7 @@
 "use strict";
 console.log("background running");
 let pop_port = null;
-const back_end_port = "https://text-whisperer-backend.onrender.com/";
+const back_end_port = "https://text-whisperer-backend.onrender.com";
 let chat_response = "";
 let pop_text = "";
 let pt = "";
