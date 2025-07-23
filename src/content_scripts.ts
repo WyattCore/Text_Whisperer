@@ -68,7 +68,7 @@ async function init_panel(selected_text:string){
     if(!panel){
         console.log("New panel created");
         panel = document.createElement("iframe");
-        panel.src = chrome.runtime.getURL("dist/panel.html");
+        panel.src = chrome.runtime.getURL("panel.html");
         panel.id = ("panel");
         panel.style.cssText= `
             position: fixed;

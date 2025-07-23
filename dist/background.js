@@ -48,7 +48,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     else if (info.menuItemId === "showSelectedText" && tab?.id && info.selectionText) {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
-            files: ['dist/content_scripts.js']
+            files: ['content_scripts.js']
         }, () => {
             setTimeout(async () => {
                 //loads before the message is sent there, preventing error
