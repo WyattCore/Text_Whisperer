@@ -12,8 +12,7 @@ https://github.com/WyattCore/Text_Whisperer_Backend
 1) Download a zip of the dist/ folder or the whole folder.
 2) Go to "chrome://extensions" and toggle the "developer mode" on. (Usually in the top right of the page.)
 3) Press the "load unpacked" button and select the zipped the "dist/" folder.
-4) You then need to set up a local backend, which you can do by following the instructions at this link: https://github.com/WyattCore/Text_Whisperer_Backend
-5) Text whisperer will appear in the extension menu on the top right of your browser, and also in your right-click menu after you have selected text.
+4) Text whisperer will appear in the extension menu on the top right of your browser, and also in your right-click menu after you have selected text.
 
 ## IMPORTANT
 
