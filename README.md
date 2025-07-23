@@ -17,3 +17,4 @@ https://github.com/WyattCore/Text_Whisperer_Backend
 ## IMPORTANT
 
 ### If you try opening the extension in an environment that doesn't allow content script injection (pdf viewers), simply select the text and click on the "Text_Whisperer for PDF" button, then click the extension in the browser tabs area. This will send your text to the chat automatically.
+<img width="1130" height="677" alt="image" src="https://github.com/user-attachments/assets/3888912e-5d55-4dd0-9395-026cf5136b56" />
