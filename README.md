@@ -8,7 +8,7 @@ https://github.com/WyattCore/Text_Whisperer_Backend
 
 
 ## HOW TO DOWNLOAD AND USE TEXT_WHISPERER
-
+      
 1) Download a zip of the repository and unzip into a desired location.
 2) Go to "chrome://extensions" and toggle the "developer mode" on. (Usually in the top right of the page.)
 3) Press the "load unpacked" button and select the the "dist/" folder out of the downloaded folder.
