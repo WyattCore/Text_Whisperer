@@ -1,5 +1,6 @@
 "use strict";
 let tab_url = "";
+let example = "this is an example from scrimba";
 document.addEventListener("DOMContentLoaded", () => {
     function get_tab_url() {
         console.log("get_tab_url called");
